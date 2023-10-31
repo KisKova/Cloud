@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeControllers", "SmartHomeControllers\SmartHomeControllers.csproj", "{EA31D0DC-D96D-4DF3-BB43-265223A31FF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{27F9A539-16EC-4D46-B461-5C7C12AE6B11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{6BCE3BB6-2703-43E7-B809-ED313C4B60D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA31D0DC-D96D-4DF3-BB43-265223A31FF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA31D0DC-D96D-4DF3-BB43-265223A31FF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA31D0DC-D96D-4DF3-BB43-265223A31FF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA31D0DC-D96D-4DF3-BB43-265223A31FF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27F9A539-16EC-4D46-B461-5C7C12AE6B11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27F9A539-16EC-4D46-B461-5C7C12AE6B11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27F9A539-16EC-4D46-B461-5C7C12AE6B11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27F9A539-16EC-4D46-B461-5C7C12AE6B11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BCE3BB6-2703-43E7-B809-ED313C4B60D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BCE3BB6-2703-43E7-B809-ED313C4B60D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BCE3BB6-2703-43E7-B809-ED313C4B60D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BCE3BB6-2703-43E7-B809-ED313C4B60D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
