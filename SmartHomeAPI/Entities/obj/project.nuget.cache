@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "brFaIP/jIkTzQs+m3K3aQxhkGGjAiIdIvQJtHuDauB9pSAI/mTxpJ63KYoSWyqgTnTtypoQQVhNTmr7iK2ZNLA==",
+  "dgSpecHash": "N2uwPSmaTBTwzwTEJSoGUJUmT3bIoKRS4niVVJmf472b9h/bmnV8rrfAN+ROOUswSfhW7pB6a+GcVkKBS3gdRQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj",
+  "projectFilePath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -1,33 +1,40 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {}
+    "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\obj\\",
+        "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj"
+              "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj"
               }
             }
           }
@@ -57,26 +64,120 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj": {
+    "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\EfcDataAccess\\EfcDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj",
-        "projectName": "Entities",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\obj\\",
+        "projectUniqueName": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\EfcDataAccess\\EfcDataAccess.csproj",
+        "projectName": "EfcDataAccess",
+        "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\EfcDataAccess\\EfcDataAccess.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\EfcDataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj"
+              },
+              "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.13, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -110,26 +211,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
+    "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
+        "projectUniqueName": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
         "projectName": "MyNotificationService",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\obj\\",
+        "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\MyNotificationService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -169,37 +277,47 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {
+    "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
+        "projectUniqueName": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
         "projectName": "SmartHomeController",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\obj\\",
+        "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
+        "packagesPath": "C:\\Users\\Miguel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\SmartHomeController\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Miguel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj"
+              "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\EfcDataAccess\\EfcDataAccess.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\EfcDataAccess\\EfcDataAccess.csproj"
+              },
+              "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
+                "projectPath": "C:\\Users\\Miguel\\Documents\\GitHub\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj"
               }
             }
           }
@@ -246,7 +364,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
