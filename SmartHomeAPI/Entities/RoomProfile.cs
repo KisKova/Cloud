@@ -14,7 +14,8 @@ public class RoomProfile
     public string RoomName { get; set; }
     
     public float IdealTemperature { get; set; }
-    public bool IsDefault { get; set; }
+
+    public bool IsDefault { get; set; } = false;
     public float IdealHumidity { get; set; }
 
     // Add other attributes specific to room profiles

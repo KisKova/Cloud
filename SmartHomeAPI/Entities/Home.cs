@@ -15,8 +15,7 @@ public class Home
     [JsonIgnore]
     public long UserId { get; set; }
     
-    [JsonIgnore]
-    public RoomProfile? CurrentRoomProfile { get; set; }
+    [JsonIgnore] public RoomProfile? CurrentRoomProfile { get; set; }
     
     [JsonIgnore]
     public List<RoomProfile> RoomProfiles { get; set; } = new List<RoomProfile>();
