@@ -5,6 +5,8 @@ public class SensorData
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int SensorDataId { get; set; } // Primary key
+    
+    public long HomeId { set; get; }
     public float TemperatureData { get; set; }
     public float HumidityData { get; set; }
     

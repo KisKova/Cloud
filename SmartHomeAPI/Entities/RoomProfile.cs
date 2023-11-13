@@ -10,14 +10,11 @@ public class RoomProfile
 
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public long RoomProfileId { get; set; }
-
-
+    
     public string RoomName { get; set; }
-
-
+    
     public float IdealTemperature { get; set; }
-
-
+    public bool IsDefault { get; set; }
     public float IdealHumidity { get; set; }
 
     // Add other attributes specific to room profiles

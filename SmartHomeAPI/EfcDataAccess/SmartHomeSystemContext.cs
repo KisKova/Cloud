@@ -6,7 +6,7 @@ namespace EfcDataAccess;
 
 public class SmartHomeSystemContext : DbContext {
     
-    public DbSet<LastMeasurement> LastMeasurements { get; set; }
+    public DbSet<SensorData> DataMeasures { get; set; }
     public DbSet<Home> Homes { get; set; }
     public DbSet<RoomProfile> RoomProfiles { get; set; }
     public DbSet<User> Users { get; set; }

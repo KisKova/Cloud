@@ -14,6 +14,10 @@ public class Home
     public string Address { get; set; }
     [JsonIgnore]
     public long UserId { get; set; }
+    
+    [JsonIgnore]
+    public RoomProfile? CurrentRoomProfile { get; set; }
+    
     [JsonIgnore]
     public List<RoomProfile> RoomProfiles { get; set; } = new List<RoomProfile>();
     [JsonIgnore] 
