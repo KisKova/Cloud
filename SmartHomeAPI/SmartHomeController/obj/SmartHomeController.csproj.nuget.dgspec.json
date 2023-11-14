@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {}
+    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
+    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj",
+        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj"
+              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj"
               }
             }
           }
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj": {
+    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -114,14 +114,14 @@
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
+    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
+        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
         "projectName": "MyNotificationService",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
+        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
         "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\obj\\",
+        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -173,14 +173,14 @@
         }
       }
     },
-    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {
+    "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
+        "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
         "projectName": "SmartHomeController",
-        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
+        "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\SmartHomeController\\SmartHomeController.csproj",
         "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\SmartHomeController\\obj\\",
+        "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\SmartHomeController\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -195,11 +195,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj"
+              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj": {
+                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj"
               },
-              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj"
+              "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj": {
+                "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj"
               }
             }
           }

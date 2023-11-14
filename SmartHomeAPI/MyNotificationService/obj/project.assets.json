@@ -361,11 +361,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
       "projectName": "MyNotificationService",
-      "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
+      "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\MyNotificationService.csproj",
       "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\MyNotificationService\\obj\\",
+      "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\MyNotificationService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"

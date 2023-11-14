@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BbXs8jz1vedlVdcjM2dil2vCAfS1jtPKExVwIRbSNOyL6ScqiFMC9xFBQNBsyPUGf+3qEbJUV5+wQX+ry6iuoQ==",
+  "dgSpecHash": "v2saJoEZwPcWrwHoq0vOFWYLCy5jRVs3b2OYI0tBlRgY4LW8iuyqg5OP+MnY9DSSGMwAbg2NSqNcLhr07IWuFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Contracts\\Contracts.csproj",
+  "projectFilePath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Contracts\\Contracts.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

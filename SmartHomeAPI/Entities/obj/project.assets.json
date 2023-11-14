@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj",
+      "projectUniqueName": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj",
       "projectName": "Entities",
-      "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\Entities.csproj",
+      "projectPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\Entities.csproj",
       "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\SmartHomeAPI\\Entities\\obj\\",
+      "outputPath": "C:\\Users\\Bruger\\RiderProjects\\SmartHomeAPI\\Cloud\\SmartHomeAPI\\Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
