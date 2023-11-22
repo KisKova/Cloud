@@ -2,6 +2,7 @@
 using Contracts;
 using EfcDataAccess;
 using EfcDataAccess.DAOs;
+using Microsoft.EntityFrameworkCore;
 
 //WebAppbuilder initializer..
 
@@ -15,6 +16,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 //here add the builder.Services.AddScoped
+
 
 builder.Services.AddScoped<SmartHomeSystemContext>();
 

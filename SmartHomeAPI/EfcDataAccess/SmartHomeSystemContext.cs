@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
-namespace EfcDataAccess;
+namespace EfcDataAccess; 
 
 public class SmartHomeSystemContext : DbContext {
     
@@ -11,19 +11,19 @@ public class SmartHomeSystemContext : DbContext {
     public DbSet<RoomProfile> RoomProfiles { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<ThresholdLimits> ThresholdsLimits { get; set; }
-
-    //protected readonly IConfiguration _configuration;
     
-    /*public SmartHomeSystemContext(IConfiguration configuration)
+    protected readonly IConfiguration _configuration;
+    
+    public SmartHomeSystemContext(IConfiguration configuration)
     {
         _configuration = configuration;
-    }*/
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlite("Data Source = ../EfcDataAccess/SmartHome.db");
     }
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
+    {
+        optionsBuilder.UseNpgsql("SmartHomeDB");
+    }
+    
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<LastMeasurement>().HasKey(m => m.LastMeasurementId);

@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeController", "Smar
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNotificationService", "MyNotificationService\MyNotificationService.csproj", "{946AE5F4-FE42-4D12-B0D8-81E4746D43E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfcDataAccess", "EfcDataAccess\EfcDataAccess.csproj", "{DFCAAAEE-AB50-4EF0-821F-69F143EE50EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfcDataAccess", "EfcDataAccess\EfcDataAccess.csproj", "{9E2EF7A3-15AD-4CA1-98D5-793F4BD84C76}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,9 +32,9 @@ Global
 		{946AE5F4-FE42-4D12-B0D8-81E4746D43E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{946AE5F4-FE42-4D12-B0D8-81E4746D43E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{946AE5F4-FE42-4D12-B0D8-81E4746D43E7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DFCAAAEE-AB50-4EF0-821F-69F143EE50EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DFCAAAEE-AB50-4EF0-821F-69F143EE50EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DFCAAAEE-AB50-4EF0-821F-69F143EE50EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DFCAAAEE-AB50-4EF0-821F-69F143EE50EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E2EF7A3-15AD-4CA1-98D5-793F4BD84C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2EF7A3-15AD-4CA1-98D5-793F4BD84C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2EF7A3-15AD-4CA1-98D5-793F4BD84C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2EF7A3-15AD-4CA1-98D5-793F4BD84C76}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
