@@ -12,16 +12,20 @@ public class SmartHomeSystemContext : DbContext {
     public DbSet<User> Users { get; set; }
     public DbSet<ThresholdLimits> ThresholdsLimits { get; set; }
     
-    protected readonly IConfiguration _configuration;
+    protected readonly IConfiguration Configuration;
+
+    public SmartHomeSystemContext() {
+        
+    }
     
     public SmartHomeSystemContext(IConfiguration configuration)
     {
-        _configuration = configuration;
+        Configuration = configuration;
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
     {
-        optionsBuilder.UseNpgsql("SmartHomeDB");
+        optionsBuilder.UseNpgsql("Host=shmonitordb.postgres.database.azure.com;Database=shmonitordb;Port=5432;User Id=smarthome@shmonitordb;Password=monitorSH_123;Ssl Mode=Prefer;");
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)

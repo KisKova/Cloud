@@ -18,6 +18,8 @@ builder.Services.AddSwaggerGen();
 //here add the builder.Services.AddScoped
 
 
+
+
 builder.Services.AddScoped<SmartHomeSystemContext>();
 
 builder.Services.AddScoped<IUserService, UserDao>();
