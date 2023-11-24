@@ -10,7 +10,7 @@ namespace SmartHomeControllers.Controllers
 {
     [ApiController]
     [Route("/Homes/")] // Base route for the HomeController
-    [ApiKey]
+    
     public class HomeController : ControllerBase
     {
         private readonly IHomeService _homeService;
