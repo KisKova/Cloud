@@ -1,0 +1,12 @@
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\bin\Debug\net7.0\MyNotificationService.deps.json
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\bin\Debug\net7.0\MyNotificationService.dll
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\bin\Debug\net7.0\MyNotificationService.pdb
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.csproj.AssemblyReference.cache
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.AssemblyInfoInputs.cache
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.AssemblyInfo.cs
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.csproj.CoreCompileInputs.cache
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.dll
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\refint\MyNotificationService.dll
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.pdb
+C:\Users\Miguel\Documents\GitHub\Cloud\MyNotificationService\obj\Debug\net7.0\ref\MyNotificationService.dll

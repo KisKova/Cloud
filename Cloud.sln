@@ -1,8 +1,46 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+<<<<<<< Updated upstream
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{454FBFEE-C088-4B0A-B22A-B5D6E10808F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeController", "SmartHomeController\SmartHomeController.csproj", "{B0ABC382-1D18-470E-BD1F-DF1E43EA5A49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EfcDataAccess", "EfcDataAccess\EfcDataAccess.csproj", "{A10538AB-5F1A-4186-960C-C051D94F01CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{3FF4F567-24AC-4ABA-A22C-322D2C20B7D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNotificationService", "MyNotificationService\MyNotificationService.csproj", "{5E790ACC-3F25-4974-930D-8B76077E20A0}"
+EndProject
+>>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
+<<<<<<< Updated upstream
+=======
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{454FBFEE-C088-4B0A-B22A-B5D6E10808F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{454FBFEE-C088-4B0A-B22A-B5D6E10808F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{454FBFEE-C088-4B0A-B22A-B5D6E10808F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{454FBFEE-C088-4B0A-B22A-B5D6E10808F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0ABC382-1D18-470E-BD1F-DF1E43EA5A49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0ABC382-1D18-470E-BD1F-DF1E43EA5A49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0ABC382-1D18-470E-BD1F-DF1E43EA5A49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0ABC382-1D18-470E-BD1F-DF1E43EA5A49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10538AB-5F1A-4186-960C-C051D94F01CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10538AB-5F1A-4186-960C-C051D94F01CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10538AB-5F1A-4186-960C-C051D94F01CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10538AB-5F1A-4186-960C-C051D94F01CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF4F567-24AC-4ABA-A22C-322D2C20B7D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF4F567-24AC-4ABA-A22C-322D2C20B7D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF4F567-24AC-4ABA-A22C-322D2C20B7D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF4F567-24AC-4ABA-A22C-322D2C20B7D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E790ACC-3F25-4974-930D-8B76077E20A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E790ACC-3F25-4974-930D-8B76077E20A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E790ACC-3F25-4974-930D-8B76077E20A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E790ACC-3F25-4974-930D-8B76077E20A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+>>>>>>> Stashed changes
 EndGlobal
