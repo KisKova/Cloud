@@ -9,7 +9,7 @@ namespace SmartHomeController.Controllers
 {
     [ApiController]
     [Route("/MaxLimits/")]
-    //[ApiKey]
+    [ApiKey]
     public class MaxLimitController : ControllerBase
     {
         private IMaxLimitService _service;

@@ -7,6 +7,7 @@ using FirebaseAdmin;
 using Google.Apis.Auth.OAuth2;
 using Microsoft.OpenApi.Models;
 using MyNotificationService;
+using SmartHomeController.Key;
 
 //using WsListenerBackgroundService;
 //WebAppbuilder initializer..
@@ -18,7 +19,33 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
+
+//adding all services
+builder.Services.AddScoped<SmartHomeSystemContext>();
+
+builder.Services.AddScoped<IUserService, UserDao>();
+builder.Services.AddScoped<IHomeService, HomeDao>();
+builder.Services.AddScoped<IRoomService, RoomProfileDao>();
+builder.Services.AddScoped<IMaxLimitService, ThresholdLimitsDao>();
+builder.Services.AddScoped<ISensorDataService, LastMeasurementDao>();
+builder.Services.AddScoped<INotificationSender, NotificationSender>();
+builder.Services.AddScoped<ApiKeyAttribute>();
+
+
+/*
+// Register IConfiguration for dependency injection
+builder.Services.AddSingleton(builder.Configuration);
+// Registering ApiKeyAttribute with IConfiguration
+builder.Services.AddScoped<ApiKeyAttribute>(provider =>
+{
+    var configuration = provider.GetRequiredService<IConfiguration>();
+    return new ApiKeyAttribute(configuration);
+});
+*/
+
+
 //builder.Services.AddSwaggerGen();
+
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Smart Home System Data Tier API", Version = "v1" });
@@ -63,15 +90,6 @@ if (FirebaseApp.DefaultInstance == null) {
 
 
 
-//adding all services
-builder.Services.AddScoped<SmartHomeSystemContext>();
-
-builder.Services.AddScoped<IUserService, UserDao>();
-builder.Services.AddScoped<IHomeService, HomeDao>();
-builder.Services.AddScoped<IRoomService, RoomProfileDao>();
-builder.Services.AddScoped<IMaxLimitService, ThresholdLimitsDao>();
-builder.Services.AddScoped<ISensorDataService, LastMeasurementDao>();
-builder.Services.AddScoped<INotificationSender, NotificationSender>();
 
 
 //Ws-client

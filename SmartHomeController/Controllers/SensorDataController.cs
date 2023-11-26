@@ -12,7 +12,7 @@ namespace SmartHomeControllers.Controllers
 {
     [ApiController]
     [Route("/SensorData/")]
-    //[ApiKey]
+    [ApiKey]
     public class SensorDataController : ControllerBase
     {
         private readonly ISensorDataService _sensorDataService;
