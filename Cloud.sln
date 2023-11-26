@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entiti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNotificationService", "MyNotificationService\MyNotificationService.csproj", "{5E790ACC-3F25-4974-930D-8B76077E20A0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{DA75B678-0219-4740-96FE-37975BCBE469}"
+EndProject
 >>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{5E790ACC-3F25-4974-930D-8B76077E20A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E790ACC-3F25-4974-930D-8B76077E20A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E790ACC-3F25-4974-930D-8B76077E20A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA75B678-0219-4740-96FE-37975BCBE469}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA75B678-0219-4740-96FE-37975BCBE469}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA75B678-0219-4740-96FE-37975BCBE469}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA75B678-0219-4740-96FE-37975BCBE469}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 >>>>>>> Stashed changes
 EndGlobal
