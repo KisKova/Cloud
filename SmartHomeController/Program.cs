@@ -3,7 +3,6 @@ using Contracts;
 using EfcDataAccess;
 using EfcDataAccess.DAOs;
 using FirebaseAdmin;
-//using FirebaseNotificationClient;
 using Google.Apis.Auth.OAuth2;
 using Microsoft.OpenApi.Models;
 using MyNotificationService;
@@ -76,7 +75,7 @@ builder.Services.AddSwaggerGen(c =>
     
     c.AddSecurityRequirement(requirement);
 });
-
+//Initialize Firebase Admin SDK
 if (FirebaseApp.DefaultInstance == null) {
     var defaultApp = FirebaseApp.Create(new AppOptions() {
         Credential = GoogleCredential

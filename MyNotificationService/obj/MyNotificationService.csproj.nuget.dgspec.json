@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {}
+    "C:\\Users\\Bruger\\Semester_04\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {
+    "C:\\Users\\Bruger\\Semester_04\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
+        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
         "projectName": "MyNotificationService",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
+        "projectPath": "C:\\Users\\Bruger\\Semester_04\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
         "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\obj\\",
+        "outputPath": "C:\\Users\\Bruger\\Semester_04\\Cloud\\MyNotificationService\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"

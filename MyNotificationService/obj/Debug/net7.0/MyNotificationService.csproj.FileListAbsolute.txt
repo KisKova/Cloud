@@ -22,3 +22,15 @@ C:\Users\Bruger\Semester_04\SEP4\Cloud\MyNotificationService\obj\Debug\net7.0\My
 C:\Users\Bruger\Semester_04\SEP4\Cloud\MyNotificationService\obj\Debug\net7.0\refint\MyNotificationService.dll
 C:\Users\Bruger\Semester_04\SEP4\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.pdb
 C:\Users\Bruger\Semester_04\SEP4\Cloud\MyNotificationService\obj\Debug\net7.0\ref\MyNotificationService.dll
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\bin\Debug\net7.0\MyNotificationService.deps.json
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\bin\Debug\net7.0\MyNotificationService.dll
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\bin\Debug\net7.0\MyNotificationService.pdb
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.csproj.AssemblyReference.cache
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.AssemblyInfoInputs.cache
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.AssemblyInfo.cs
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.csproj.CoreCompileInputs.cache
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.dll
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\refint\MyNotificationService.dll
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\MyNotificationService.pdb
+C:\Users\Bruger\Semester_04\Cloud\MyNotificationService\obj\Debug\net7.0\ref\MyNotificationService.dll

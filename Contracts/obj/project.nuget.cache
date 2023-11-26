@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "BVnNtozys5gicGeAmh3ZDc9wPOORdTEcMBJOYIExvCSDp8xYtiS/aPY6MDrn8JEce40l2pJzuZeB9wvYDqB1vQ==",
+  "dgSpecHash": "+z4aDok7Ch6uGAgbMhRrkn1plriRqDMOgmXroePqyv1IIm0Efb616gtBNvIN3xmrvDODuE/odwkbwKmKDwkg/w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Bruger\\Semester_04\\Cloud\\Contracts\\Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Bruger\\.nuget\\packages\\firebaseadmin\\2.4.0\\firebaseadmin.2.4.0.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\google.api.gax\\3.2.0\\google.api.gax.3.2.0.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\google.api.gax.rest\\3.2.0\\google.api.gax.rest.3.2.0.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\google.apis\\1.49.0\\google.apis.1.49.0.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\google.apis.auth\\1.49.0\\google.apis.auth.1.49.0.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\google.apis.core\\1.49.0\\google.apis.core.1.49.0.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.0.0\\microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Bruger\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512"
+  ],
   "logs": []
 }
