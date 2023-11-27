@@ -25,7 +25,8 @@ public class SmartHomeSystemContext : DbContext {
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
     {
-        optionsBuilder.UseNpgsql("Host=shmonitordb.postgres.database.azure.com;Database=shmonitordb;Port=5432;User Id=smarthome@shmonitordb;Password=monitorSH_123;Ssl Mode=Prefer;");
+        optionsBuilder.UseNpgsql("Host=cornelius.db.elephantsql.com;Database=tckwnbjh;Port=5432;Username=tckwnbjh;Password=AVp0qq2Ls5Go3sZD4Xv3Jp97TAqu_gGv;",
+                options => options.UseAdminDatabase("tckwnbjh"));
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
