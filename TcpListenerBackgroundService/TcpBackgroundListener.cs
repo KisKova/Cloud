@@ -1,6 +1,8 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Newtonsoft.Json;
+using TcpListenerBackgroundService.DTOs;
 
 namespace TcpListenerBackgroundService;
 
@@ -64,7 +66,11 @@ public class TcpBackgroundListener
                 if (!stream.DataAvailable)
                 {
                     string receivedData = data.ToString();
-                    Console.WriteLine("This is the received data: " + data);
+                    
+                    var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData);
+                    
+                    
+                    Console.WriteLine("This should be the Temperature Integer: " + upLinkDto.temperature_integer);
                     
                     // Our logic here...
                             
