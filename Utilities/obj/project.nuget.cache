@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "iCi5xduWjGJoBUe3lpuLqQwxZCFliNqAbVNoRUtKA9BGWVqU+5CPZ8TTa3GlKd3Kw/vGI6gSoIaP6WhpJItnTg==",
+  "dgSpecHash": "3Q6OQinyin7e3DX2SiBJFlotEHi1+MUe7C36NrbPL323LTcnRWzzgx5qpwLKs6jnma0fgcBH1zjky2+6knP2Pw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bruger\\Semester_04\\Cloud\\Utilities\\Utilities.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Users/marcellkovacs/RiderProjects/Cloud/Utilities/Utilities.csproj",
+  "expectedPackageFiles": [
+    "/Users/marcellkovacs/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/marcellkovacs/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyNotificationService", "My
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{DA75B678-0219-4740-96FE-37975BCBE469}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackgroundListenerTCP", "BackgroundListenerTCP\BackgroundListenerTCP.csproj", "{80E92CFE-C764-48D7-95F1-E816269588D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpListenerBackgroundService", "TcpListenerBackgroundService\TcpListenerBackgroundService.csproj", "{BA1FA2E7-C6DE-4F1C-ABF7-D8C2A8FE04A9}"
+EndProject
 >>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +51,14 @@ Global
 		{DA75B678-0219-4740-96FE-37975BCBE469}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA75B678-0219-4740-96FE-37975BCBE469}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA75B678-0219-4740-96FE-37975BCBE469}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80E92CFE-C764-48D7-95F1-E816269588D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80E92CFE-C764-48D7-95F1-E816269588D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80E92CFE-C764-48D7-95F1-E816269588D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80E92CFE-C764-48D7-95F1-E816269588D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA1FA2E7-C6DE-4F1C-ABF7-D8C2A8FE04A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA1FA2E7-C6DE-4F1C-ABF7-D8C2A8FE04A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA1FA2E7-C6DE-4F1C-ABF7-D8C2A8FE04A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA1FA2E7-C6DE-4F1C-ABF7-D8C2A8FE04A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 >>>>>>> Stashed changes
 EndGlobal
