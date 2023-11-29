@@ -69,7 +69,6 @@ public class TcpBackgroundListener
                     
                     var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData);
                     
-                    
                     Console.WriteLine("This should be the Temperature Integer: " + upLinkDto.temperature_integer);
                     
                     // Our logic here...
