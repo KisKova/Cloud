@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using Contracts;
 using Newtonsoft.Json;
 using TcpListenerBackgroundService.DTOs;
 
@@ -50,7 +51,8 @@ public class TcpBackgroundListener
         try
         {
             using var scope = _serviceProvider.CreateScope();
-            
+
+            var sensorDataService = _serviceProvider.GetRequiredService<ISensorDataService>();
             
             NetworkStream stream = client.GetStream();
             byte[] buffer = new byte[256];
@@ -70,6 +72,7 @@ public class TcpBackgroundListener
                     var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData);
                     
                     Console.WriteLine("This should be the Temperature Integer: " + upLinkDto.temperature_integer);
+                    
                     
                     // Our logic here...
                             
