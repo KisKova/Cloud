@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "s/+OmOS0+3dJ0Ht4dvU6ZuomZfesMtiCfMP4x7+TFUGrtsgy0K+i5QLvqSF4S1Xh/gqop1ab7JWyyIA1Syyjbg==",
+  "dgSpecHash": "PZGd94PXpHpem6PYSf/yxbLNfYzE+9E70s86YKD5E2q7JK3pp0V4sVs2mXw8M7vz/5PlthyPav7deq20Fgs1/Q==",
   "success": true,
   "projectFilePath": "/Users/marcellkovacs/RiderProjects/Cloud/TcpListenerBackgroundService/TcpListenerBackgroundService.csproj",
   "expectedPackageFiles": [
@@ -12,7 +12,10 @@
     "/Users/marcellkovacs/.nuget/packages/google.apis.core/1.49.0/google.apis.core.1.49.0.nupkg.sha512",
     "/Users/marcellkovacs/.nuget/packages/microsoft.bcl.asyncinterfaces/1.0.0/microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512",
     "/Users/marcellkovacs/.nuget/packages/newtonsoft.json/12.0.3/newtonsoft.json.12.0.3.nupkg.sha512",
-    "/Users/marcellkovacs/.nuget/packages/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512"
+    "/Users/marcellkovacs/.nuget/packages/system.collections.immutable/1.7.1/system.collections.immutable.1.7.1.nupkg.sha512",
+    "/Users/marcellkovacs/.nuget/packages/microsoft.netcore.app.ref/7.0.14/microsoft.netcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/marcellkovacs/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.14/microsoft.aspnetcore.app.ref.7.0.14.nupkg.sha512",
+    "/Users/marcellkovacs/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.14/microsoft.netcore.app.host.osx-arm64.7.0.14.nupkg.sha512"
   ],
   "logs": []
 }
