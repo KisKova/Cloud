@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tcp-server-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tcplistenerbackgroundservice
+  template:
+    metadata:
+      labels:
+        app: tcplistenerbackgroundservice
+    spec:
+      containers:
+        - name: tcplistenerbackgroundservice
+          image: tcplistenerbackgroundservice
+          ports:
+            - containerPort: 5000  # Replace with your server port

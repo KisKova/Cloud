@@ -53,7 +53,7 @@ public class TcpBackgroundListener
         {
             using var scope = _serviceProvider.CreateScope();
 
-            var sensorDataService = _serviceProvider.GetRequiredService<ISensorDataService>();
+            //var sensorDataService = _serviceProvider.GetRequiredService<ISensorDataService>();
             
             NetworkStream stream = client.GetStream();
             byte[] buffer = new byte[256];
@@ -70,13 +70,14 @@ public class TcpBackgroundListener
                 {
                     string receivedData = data.ToString();
                     
-                    var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData);
+                    //var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData);
+                    Console.WriteLine("Received data: " + receivedData);
                     
-                    Console.WriteLine("This should be the Temperature Integer: " + upLinkDto.temperature_integer);
+                    //Console.WriteLine("This should be the Temperature Integer: " + upLinkDto.temperature_integer);
 
-                    var sensorData = new SensorData(0, 25, 40);
+                    //var sensorData = new SensorData(0, 25, 40);
 
-                    await sensorDataService.AddSensorMeasurement(sensorData, 1);
+                    //await sensorDataService.AddSensorMeasurement(sensorData, 1);
                     // Our logic here...
                             
                     data.Clear();

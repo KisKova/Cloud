@@ -1,0 +1,12 @@
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/bin/Debug/net7.0/Utilities.deps.json
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/bin/Debug/net7.0/Utilities.dll
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/bin/Debug/net7.0/Utilities.pdb
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/Utilities.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/Utilities.AssemblyInfoInputs.cache
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/Utilities.AssemblyInfo.cs
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/Utilities.csproj.CoreCompileInputs.cache
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/Utilities.sourcelink.json
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/Utilities.dll
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/refint/Utilities.dll
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/Utilities.pdb
+/Users/marcellkovacs/RiderProjects/Cloud/Utilities/obj/Debug/net7.0/ref/Utilities.dll

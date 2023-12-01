@@ -1,5 +1,5 @@
-﻿#FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
-#WORKDIR /app
+﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+WORKDIR /app
 #EXPOSE 80
 #EXPOSE 443
 
@@ -17,5 +17,4 @@ RUN dotnet publish "TcpListenerBackgroundService.csproj" -c Release -o /app/publ
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-EXPOSE 5000 #This is the port number
 ENTRYPOINT ["dotnet", "TcpListenerBackgroundService.dll"]

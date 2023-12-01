@@ -13,8 +13,7 @@
           "FirebaseAdmin": "2.4.0",
           "Microsoft.EntityFrameworkCore": "7.0.13",
           "Microsoft.EntityFrameworkCore.Design": "7.0.13",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11",
-          "Microsoft.Extensions.Configuration": "6.0.0.0"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.11"
         },
         "runtime": {
           "EfcDataAccess.dll": {}
@@ -346,14 +345,6 @@
         "runtime": {
           "Entities.dll": {}
         }
-      },
-      "Microsoft.Extensions.Configuration/6.0.0.0": {
-        "runtime": {
-          "Microsoft.Extensions.Configuration.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
-        }
       }
     }
   },
@@ -587,11 +578,6 @@
     },
     "Entities/1.0.0": {
       "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Microsoft.Extensions.Configuration/6.0.0.0": {
-      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }
