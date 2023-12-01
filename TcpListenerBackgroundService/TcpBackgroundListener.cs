@@ -2,6 +2,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using Contracts;
+using Entities;
 using Newtonsoft.Json;
 using TcpListenerBackgroundService.DTOs;
 
@@ -9,7 +10,7 @@ namespace TcpListenerBackgroundService;
 
 public class TcpBackgroundListener
 {
-    private readonly TcpListener _tcpListener;
+    private TcpListener _tcpListener;
     private readonly IServiceProvider _serviceProvider;
 
     // Set the IP address and port number for the server
@@ -72,8 +73,10 @@ public class TcpBackgroundListener
                     var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData);
                     
                     Console.WriteLine("This should be the Temperature Integer: " + upLinkDto.temperature_integer);
-                    
-                    
+
+                    var sensorData = new SensorData(0, 25, 40);
+
+                    await sensorDataService.AddSensorMeasurement(sensorData, 1);
                     // Our logic here...
                             
                     data.Clear();

@@ -1,3 +1,5 @@
+using Contracts;
+
 namespace Tests;
 
 [TestClass]
