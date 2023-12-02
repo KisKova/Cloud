@@ -18,8 +18,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpListenerBackgroundServic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{F874048A-D05F-4AF2-8FDD-6C43EF4A49E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{98A0CB52-E222-4F0F-BCB4-AD085062F135}"
-EndProject
 >>>>>>> Stashed changes
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +59,6 @@ Global
 		{F874048A-D05F-4AF2-8FDD-6C43EF4A49E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F874048A-D05F-4AF2-8FDD-6C43EF4A49E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F874048A-D05F-4AF2-8FDD-6C43EF4A49E3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{98A0CB52-E222-4F0F-BCB4-AD085062F135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98A0CB52-E222-4F0F-BCB4-AD085062F135}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98A0CB52-E222-4F0F-BCB4-AD085062F135}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98A0CB52-E222-4F0F-BCB4-AD085062F135}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 >>>>>>> Stashed changes
 EndGlobal
