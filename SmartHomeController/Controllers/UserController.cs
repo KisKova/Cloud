@@ -9,7 +9,7 @@ namespace SmartHomeControllers.Controllers
 {
     [ApiController]
     [Route("/users")]  
-    [ApiKey]
+    //[ApiKey]
     public class UserController : ControllerBase
     {
         private IUserService _service;

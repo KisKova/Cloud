@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://shmonitordb.postgres.database.azure.com:5432/postgres</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="tckwnbjh@cornelius.db.elephantsql.com " uuid="3e3a5a4a-1eae-4ab7-b691-1bb41e55cbe4">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://cornelius.db.elephantsql.com:5432/tckwnbjh</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

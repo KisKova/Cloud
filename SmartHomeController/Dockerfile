@@ -5,9 +5,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["SmartHomeController/SmartHomeController.csproj", "SmartHomeController/"]
+COPY ["SmartHomeController.csproj", "SmartHomeController/"]
 RUN dotnet restore "SmartHomeController/SmartHomeController.csproj"
-COPY . .
+COPY . ./SmartHomeController
 WORKDIR "/src/SmartHomeController"
 RUN dotnet build "SmartHomeController.csproj" -c Release -o /app/build
 

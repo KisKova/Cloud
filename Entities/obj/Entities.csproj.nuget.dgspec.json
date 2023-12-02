@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\Semester_04\\Cloud\\Entities\\Entities.csproj": {}
+    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\Semester_04\\Cloud\\Entities\\Entities.csproj": {
+    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\Cloud\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\Cloud\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\Cloud\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -60,6 +60,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }
