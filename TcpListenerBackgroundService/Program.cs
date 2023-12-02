@@ -11,7 +11,7 @@ public class Program
         var serverTask = tcpListener.StartListeningAsync();
 
         Console.WriteLine("Press any key to stop the server...");
-        Console.ReadKey();
+        Console.Read();
 
         // Optionally, you might add cancellation logic here to stop the server gracefully.
         // For simplicity, this example stops the server immediately when a key is pressed.
