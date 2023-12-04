@@ -1,3 +1,3 @@
 ﻿<Project>
-  <Import Project="..\build\SmartHomeController.props" />
+  <Import Project="../build/SmartHomeController.props" />
 </Project>
