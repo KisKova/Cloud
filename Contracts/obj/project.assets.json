@@ -155,161 +155,6 @@
           "bin/placeholder/Entities.dll": {}
         }
       }
-    },
-    "net7.0/linux-x64": {
-      "FirebaseAdmin/2.4.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Api.Gax.Rest": "3.2.0",
-          "Google.Apis.Auth": "1.49.0",
-          "System.Collections.Immutable": "1.7.1"
-        },
-        "compile": {
-          "lib/netstandard2.0/FirebaseAdmin.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/FirebaseAdmin.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Google.Api.Gax/3.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Api.Gax.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Api.Gax.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Google.Api.Gax.Rest/3.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Api.Gax": "3.2.0",
-          "Google.Apis.Auth": "[1.48.0, 2.0.0)"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Google.Apis/1.49.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis.Core": "1.49.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Google.Apis.Auth/1.49.0": {
-        "type": "package",
-        "dependencies": {
-          "Google.Apis": "1.49.0",
-          "Google.Apis.Core": "1.49.0"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
-          "lib/netstandard2.0/Google.Apis.Auth.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Google.Apis.Core/1.49.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "12.0.3"
-        },
-        "compile": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Google.Apis.Core.dll": {
-            "related": ".pdb;.xml"
-          }
-        }
-      },
-      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Newtonsoft.Json/12.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/Newtonsoft.Json.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "System.Collections.Immutable/1.7.1": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Collections.Immutable.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Entities/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v7.0",
-        "dependencies": {
-          "FirebaseAdmin": "2.4.0"
-        },
-        "compile": {
-          "bin/placeholder/Entities.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Entities.dll": {}
-        }
-      }
     }
   },
   "libraries": {
@@ -530,19 +375,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bruger\\.nuget\\packages\\": {}
+    "/Users/marcellkovacs/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj",
+      "projectUniqueName": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj",
       "projectName": "Contracts",
-      "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj",
-      "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\obj\\",
+      "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj",
+      "packagesPath": "/Users/marcellkovacs/.nuget/packages/",
+      "outputPath": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/Users/marcellkovacs/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
@@ -554,8 +399,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj": {
-              "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj"
+            "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj": {
+              "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj"
             }
           }
         }
@@ -586,17 +431,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.14, 7.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
-      }
-    },
-    "runtimes": {
-      "linux-x64": {
-        "#import": []
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
       }
     }
   }

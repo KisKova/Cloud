@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\SmartHomeController\\SmartHomeController.csproj": {}
+    "/Users/marcellkovacs/RiderProjects/Cloud/SmartHomeController/SmartHomeController.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj": {
+    "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\obj\\",
+        "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj",
+        "packagesPath": "/Users/marcellkovacs/.nuget/packages/",
+        "outputPath": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/marcellkovacs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -26,8 +26,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj"
+              "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj": {
+                "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj"
               }
             }
           }
@@ -58,31 +58,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\EfcDataAccess\\EfcDataAccess.csproj": {
+    "/Users/marcellkovacs/RiderProjects/Cloud/EfcDataAccess/EfcDataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\EfcDataAccess\\EfcDataAccess.csproj",
+        "projectUniqueName": "/Users/marcellkovacs/RiderProjects/Cloud/EfcDataAccess/EfcDataAccess.csproj",
         "projectName": "EfcDataAccess",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\EfcDataAccess\\EfcDataAccess.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\EfcDataAccess\\obj\\",
+        "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/EfcDataAccess/EfcDataAccess.csproj",
+        "packagesPath": "/Users/marcellkovacs/.nuget/packages/",
+        "outputPath": "/Users/marcellkovacs/RiderProjects/Cloud/EfcDataAccess/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/marcellkovacs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -94,11 +99,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj"
+              "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj": {
+                "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj"
               },
-              "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj"
+              "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj": {
+                "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj"
               }
             }
           }
@@ -143,31 +148,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj": {
+    "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj",
+        "projectUniqueName": "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\obj\\",
+        "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj",
+        "packagesPath": "/Users/marcellkovacs/.nuget/packages/",
+        "outputPath": "/Users/marcellkovacs/RiderProjects/Cloud/Entities/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/marcellkovacs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -207,31 +217,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {
+    "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
+        "projectUniqueName": "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj",
         "projectName": "MyNotificationService",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\obj\\",
+        "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj",
+        "packagesPath": "/Users/marcellkovacs/.nuget/packages/",
+        "outputPath": "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/marcellkovacs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -271,31 +286,36 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\SmartHomeController\\SmartHomeController.csproj": {
+    "/Users/marcellkovacs/RiderProjects/Cloud/SmartHomeController/SmartHomeController.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\SmartHomeController\\SmartHomeController.csproj",
+        "projectUniqueName": "/Users/marcellkovacs/RiderProjects/Cloud/SmartHomeController/SmartHomeController.csproj",
         "projectName": "SmartHomeController",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\SmartHomeController\\SmartHomeController.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\SmartHomeController\\obj\\",
+        "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/SmartHomeController/SmartHomeController.csproj",
+        "packagesPath": "/Users/marcellkovacs/.nuget/packages/",
+        "outputPath": "/Users/marcellkovacs/RiderProjects/Cloud/SmartHomeController/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/marcellkovacs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -307,17 +327,17 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Contracts\\Contracts.csproj"
+              "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj": {
+                "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Contracts/Contracts.csproj"
               },
-              "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\EfcDataAccess\\EfcDataAccess.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\EfcDataAccess\\EfcDataAccess.csproj"
+              "/Users/marcellkovacs/RiderProjects/Cloud/EfcDataAccess/EfcDataAccess.csproj": {
+                "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/EfcDataAccess/EfcDataAccess.csproj"
               },
-              "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\Entities\\Entities.csproj"
+              "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj": {
+                "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/Entities/Entities.csproj"
               },
-              "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {
-                "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj"
+              "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj": {
+                "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj"
               }
             }
           }
@@ -340,11 +360,6 @@
               "target": "Package",
               "version": "[7.0.10, )"
             },
-            "Microsoft.NET.Build.Containers": {
-              "target": "Package",
-              "version": "[0.3.2, )",
-              "autoReferenced": true
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -363,8 +378,16 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
-              "version": "[7.0.3, 7.0.3]"
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-arm64",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
             }
           ],
           "frameworkReferences": {
@@ -375,12 +398,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }

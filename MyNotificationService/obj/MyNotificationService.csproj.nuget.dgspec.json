@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {}
+    "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj": {
+    "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
+        "projectUniqueName": "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj",
         "projectName": "MyNotificationService",
-        "projectPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\MyNotificationService.csproj",
-        "packagesPath": "C:\\Users\\Bruger\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bruger\\Semester_04\\SEP4\\Cloud\\MyNotificationService\\obj\\",
+        "projectPath": "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/MyNotificationService.csproj",
+        "packagesPath": "/Users/marcellkovacs/.nuget/packages/",
+        "outputPath": "/Users/marcellkovacs/RiderProjects/Cloud/MyNotificationService/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bruger\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/Users/marcellkovacs/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -54,17 +54,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.14, 7.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "linux-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.100/RuntimeIdentifierGraph.json"
         }
       }
     }
