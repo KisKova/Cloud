@@ -1,4 +1,6 @@
 using Contracts;
+using EfcDataAccess.DAOs;
+using Entities;
 using TcpListenerBackgroundService;
 
 public class Program
@@ -23,6 +25,9 @@ public class Program
         // Set up your service collection and register services here
         var serviceCollection = new ServiceCollection();
         // Add services if needed using serviceCollection.AddTransient/Scoped/Singleton
+        serviceCollection.AddScoped<ISensorDataService, LastMeasurementDao>();
+        serviceCollection.AddScoped<EfcDataAccess.SmartHomeSystemContext>();
+        serviceCollection.AddScoped<IRoomService, RoomProfileDao>();
         
         // Build the service provider
         return serviceCollection.BuildServiceProvider();
