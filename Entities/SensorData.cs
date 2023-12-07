@@ -9,6 +9,7 @@ public class SensorData
     public long HomeId { set; get; }
     public float TemperatureData { get; set; }
     public float HumidityData { get; set; }
+    public string DeviceEui { get; set; }
     
     public DateTime Timestamp { get; set; }
 
@@ -23,10 +24,18 @@ public class SensorData
         HumidityData = humidityData;
         Timestamp = DateTime.Now;
     }
+    
+    public SensorData(float temperatureData, float humidityData, string deviceEui)
+    {
+        DeviceEui = deviceEui;
+        TemperatureData = temperatureData;
+        HumidityData = humidityData;
+        Timestamp = DateTime.Now;
+    }
 
     // Timestamp = DateTimeOffset.FromUnixTimeMilliseconds(ts).DateTime;
     public override string ToString()
     {
-        return $"SensorData-{SensorDataId}:\n\tTemperature: {TemperatureData}°C, Humidity: {HumidityData}% - at {Timestamp}";
+        return $"SensorData-{SensorDataId}:\n\tTemperature: {TemperatureData}°C, Humidity: {HumidityData}%, DeviceEui: {DeviceEui} - at {Timestamp}";
     }
 } 

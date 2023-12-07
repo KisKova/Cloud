@@ -98,7 +98,8 @@ public class TcpBackgroundListener
 
                     sensorData.HumidityData = 46;
                     sensorData.TemperatureData = 26;
-                    sensorData.HomeId = 1;
+                    sensorData.HomeId = 8;
+                    sensorData.DeviceEui = "SSHDI7";
                     //sensorData.Timestamp = DateTime.Now;
                     
                     //SensorData sensorData2 = new SensorData(26,46,1);
@@ -106,7 +107,7 @@ public class TcpBackgroundListener
                     
                     Console.WriteLine("Adding the data to the database...");
                     // await _sensorDataService.AddSensorMeasurementWithEui(sensorData,receivedData);
-                    await sensorDataService.AddSensorMeasurement(sensorData,1);
+                    await sensorDataService.AddSensorMeasurement(sensorData,8);
                     //Console.WriteLine("This should be the Temperature Integer: " + upLinkDto.temperature_integer);
 
                     //var sensorData = new SensorData(0, 25, 40);

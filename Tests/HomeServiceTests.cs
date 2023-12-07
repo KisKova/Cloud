@@ -15,6 +15,7 @@ public class HomeServiceTests
 {
     private SmartHomeSystemContext _dbContext;
     private HomeDao _homeDao;
+    private LastMeasurementDao _lastMeasurementDao;
 
     [SetUp]
     public void Setup()
@@ -25,16 +26,18 @@ public class HomeServiceTests
 
         //_dbContext = new SmartHomeSystemContext(options);
         _homeDao = new HomeDao(_dbContext);
+        _lastMeasurementDao = new LastMeasurementDao(_dbContext);
     }
 
     [Test]
-    public async Task AddNewHome_Should_Add_Home_For_User()
+    public async Task AddDataToDataMeasurements()
     {
-        // Arrange
-        var user = new User { Id = 3, Username = "TestUser"};
-        //var home = new Home { HomeId = 1, UserId = 1};
+        var sensorData = new SensorData(100, 99, "SHSDIG9999");
 
-        await _dbContext.Users.AddAsync(user);
+        sensorData.HomeId = 1;
+        
+        await _lastMeasurementDao.AddSensorMeasurement(sensorData, 1);
+        
         await _dbContext.SaveChangesAsync();
 
         // Act
