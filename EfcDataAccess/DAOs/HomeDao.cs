@@ -120,6 +120,21 @@ public class HomeDao : IHomeService {
 
         return home;
     }
+    
+    public async Task<ICollection<Home>> RetrieveAllHomesFromSystem() {
+        ICollection<Home> homes = new List<Home>();
+        try
+        {
+            homes = await _smartHomeSystemContext.Homes!.ToListAsync();
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An error occurred trying to retrieve all homes.");
+            throw;
+        }
+
+        return homes;
+    }
 
     public async Task<ICollection<LastMeasurement>> RetrieveHomesWithLastMeasurement(long userId) {
         User user;

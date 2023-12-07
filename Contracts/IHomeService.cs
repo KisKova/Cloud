@@ -12,6 +12,8 @@ namespace Contracts
         Task<ICollection<Home>> RetrieveUserHomes(long userId);
 
         Task<Home> GetLastMeasurementAtHome();
+
+        public Task<ICollection<Home>> RetrieveAllHomesFromSystem(); 
         Task<ICollection<LastMeasurement>> RetrieveHomesWithLastMeasurement(long userId);
 
         Task<long> RetrieveHomeIdByEui(string eui);
