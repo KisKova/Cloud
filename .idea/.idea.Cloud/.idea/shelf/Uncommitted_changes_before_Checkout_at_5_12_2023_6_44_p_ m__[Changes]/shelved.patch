@@ -1,0 +1,132 @@
+Index: Contracts/ISensorDataService.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Collections.Generic;\r\nusing System.Threading.Tasks;\r\nusing Entities;\r\n\r\nnamespace Contracts\r\n{\r\n    public interface ISensorDataService\r\n    {\r\n        public Task<ICollection<SensorData>> GetRecentMeasurements(long homeId, int amount);\r\n        public Task<SensorData> GetLastMeasurement(long gId);\r\n        public Task<ICollection<SensorData>> GetHourlyMeasurements(long homeId, int hours);\r\n        public Task<ICollection<SensorData>> GetDailyMeasurements(long homeId, int days);\r\n        public Task<ICollection<SensorData>> GetMonthlyMeasurements(long homeId, int month, int year);\r\n        public Task<ICollection<SensorData>> GetYearlyMeasurements(long homeId, int year);\r\n        public Task AddSensorMeasurement(SensorData sensorData, long homeId);\r\n        public Task AddSensorMeasurementWithEui(SensorData sensorData, string EUI);\r\n    }\r\n}
+===================================================================
+diff --git a/Contracts/ISensorDataService.cs b/Contracts/ISensorDataService.cs
+--- a/Contracts/ISensorDataService.cs	
++++ b/Contracts/ISensorDataService.cs	
+@@ -12,7 +12,7 @@
+         public Task<ICollection<SensorData>> GetDailyMeasurements(long homeId, int days);
+         public Task<ICollection<SensorData>> GetMonthlyMeasurements(long homeId, int month, int year);
+         public Task<ICollection<SensorData>> GetYearlyMeasurements(long homeId, int year);
+-        public Task AddSensorMeasurement(SensorData sensorData, long homeId);
++        public Task AddSensorMeasurement(SensorData sensorData, long homeId); //change homID with RoomID
+         public Task AddSensorMeasurementWithEui(SensorData sensorData, string EUI);
+     }
+ }
+\ No newline at end of file
+Index: EfcDataAccess/DAOs/LastMeasurementDao.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Diagnostics.Metrics;\r\nusing Contracts;\r\nusing Entities;\r\nusing Microsoft.EntityFrameworkCore;\r\n\r\nnamespace EfcDataAccess.DAOs; \r\n\r\npublic class LastMeasurementDao : ISensorDataService {\r\n\r\n    private readonly SmartHomeSystemContext _smartHomeSystemContext;\r\n\r\n    public LastMeasurementDao(SmartHomeSystemContext smartHomeSystemContext) {\r\n        _smartHomeSystemContext = smartHomeSystemContext;\r\n    }\r\n\r\n\r\n    public async Task<ICollection<SensorData>> GetRecentMeasurements(long homeId, int amount) {\r\n        ICollection<SensorData> dataMeasures = await _smartHomeSystemContext.DataMeasures!.Take(amount)\r\n                .Where(dm => dm.HomeId == homeId)\r\n                .OrderByDescending(dm => dm.Timestamp)\r\n                .ToListAsync();\r\n        return dataMeasures;\r\n    }\r\n\r\n    public async Task<SensorData> GetLastMeasurement(long hId) {\r\n        SensorData dataMeasures = await _smartHomeSystemContext.DataMeasures!\r\n                .Where(dm => dm.HomeId == hId)\r\n                .OrderByDescending(dm => dm.Timestamp)\r\n                .FirstAsync();\r\n        return dataMeasures;\r\n    }\r\n\r\n    public async Task<ICollection<SensorData>> GetHourlyMeasurements(long homeId, int hours) {\r\n\r\n        TimeSpan timeSpan = new TimeSpan(hours, 0, 0);\r\n        DateTime temp = DateTime.Now.Subtract(timeSpan);\r\n        ICollection<SensorData> dataMeasures =\r\n                await _smartHomeSystemContext.DataMeasures!\r\n                        .Where(dm => dm.HomeId == homeId && dm.Timestamp > temp)\r\n                        .ToListAsync();\r\n        return dataMeasures;\r\n    }\r\n\r\n    public async Task<ICollection<SensorData>> GetDailyMeasurements(long homeId, int days) {\r\n\r\n        TimeSpan timeSpan = new TimeSpan(days, 0, 0, 0);\r\n        DateTime temp = DateTime.Now.Subtract(timeSpan);\r\n        ICollection<SensorData> dataMeasures =\r\n                await _smartHomeSystemContext.DataMeasures!\r\n                        .Where(dm => dm.Timestamp > temp && dm.HomeId == homeId)\r\n                        .ToListAsync();\r\n        return dataMeasures;\r\n    }\r\n\r\n    public async Task<ICollection<SensorData>> GetMonthlyMeasurements(long homeId, int month, int year) {\r\n       \r\n        ICollection<SensorData> dataMeasures =\r\n                await _smartHomeSystemContext.DataMeasures!\r\n                        .Where(m => m.Timestamp.Month == month && m.Timestamp.Year==year && m.HomeId==homeId)\r\n                        .ToListAsync();\r\n        return dataMeasures;\r\n    }\r\n\r\n    public async Task<ICollection<SensorData>> GetYearlyMeasurements(long homeId, int year) {\r\n        \r\n        ICollection<SensorData> dataMeasures =\r\n                await _smartHomeSystemContext.DataMeasures!\r\n                        .Where(m => m.Timestamp.Year == year && m.HomeId==homeId)\r\n                        .ToListAsync();\r\n        return dataMeasures;    \r\n    }\r\n\r\n    public async Task AddSensorMeasurement(SensorData sensorData, long homeId) {\r\n\r\n        Home home;\r\n        try\r\n        {\r\n            home = await _smartHomeSystemContext.Homes!.Include(h => h.CurrentRoomProfile)\r\n                    .Include(h => h.Measurements)\r\n                    .FirstAsync(h => h.HomeId == homeId);\r\n        }\r\n        catch (Exception e)\r\n        {\r\n            Console.WriteLine(e);\r\n            throw new Exception(\"Home not found.\");\r\n        }\r\n        \r\n        home.Measurements!.Add(sensorData);\r\n        _smartHomeSystemContext.Update(home);\r\n        if (home.CurrentRoomProfile != null)\r\n        {\r\n            RoomProfile profile;\r\n            try\r\n            {\r\n                profile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p =>\r\n                        p.RoomProfileId == home.CurrentRoomProfile!.RoomProfileId);\r\n            }\r\n            catch (Exception e)\r\n            {\r\n                Console.WriteLine(e);\r\n                throw new Exception(\"Room profile not found.\");\r\n            }\r\n            \r\n            profile.Measurements!.Add(sensorData);\r\n            _smartHomeSystemContext.Update(profile);\r\n        }\r\n\r\n        await _smartHomeSystemContext.DataMeasures!.AddAsync(sensorData);\r\n        await _smartHomeSystemContext.SaveChangesAsync();\r\n        await Console.Out.WriteLineAsync(\"LastMeasurementDAO: \" + sensorData + \"added to DB\");\r\n        \r\n    }\r\n    \r\n    \r\n\r\n    public async Task AddSensorMeasurementWithEui(SensorData sensorData, string eui) {\r\n        ICollection<Home> homes;\r\n        try\r\n        {\r\n            homes = await _smartHomeSystemContext.Homes!\r\n                    .Include(h => h.CurrentRoomProfile)\r\n                    .Include(h => h.Measurements)\r\n                    .Where(h => h.DeviceEui == eui)\r\n                    .ToListAsync();\r\n        }\r\n        catch (Exception e)\r\n        {\r\n            Console.WriteLine(e);\r\n            throw new Exception(\"Homes not found.\");\r\n        }\r\n\r\n        try\r\n        {\r\n            foreach (var home in homes)\r\n            {\r\n                SensorData sd = new SensorData(sensorData.SensorDataId, sensorData.TemperatureData, sensorData.HumidityData);\r\n                home.Measurements!.Add(sd);\r\n                await _smartHomeSystemContext.DataMeasures!.AddAsync(sd);\r\n                _smartHomeSystemContext.Homes!.Update(home);\r\n                await _smartHomeSystemContext.SaveChangesAsync();\r\n            }\r\n        }\r\n        catch (Exception e)\r\n        {\r\n            throw new Exception(\"Something went wrong when updating the database.\");\r\n            \r\n        }\r\n\r\n        await Console.Out.WriteLineAsync(\"LastMeasurementDAO: \" + sensorData + \" added to DB\");\r\n    }\r\n}
+===================================================================
+diff --git a/EfcDataAccess/DAOs/LastMeasurementDao.cs b/EfcDataAccess/DAOs/LastMeasurementDao.cs
+--- a/EfcDataAccess/DAOs/LastMeasurementDao.cs	
++++ b/EfcDataAccess/DAOs/LastMeasurementDao.cs	
+@@ -73,6 +73,7 @@
+     public async Task AddSensorMeasurement(SensorData sensorData, long homeId) {
+ 
+         Home home;
++        //RoomProfile rp
+         try
+         {
+             home = await _smartHomeSystemContext.Homes!.Include(h => h.CurrentRoomProfile)
+Index: Entities/Home.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Collections.Generic;\r\nusing System.ComponentModel.DataAnnotations;\r\nusing System.ComponentModel.DataAnnotations.Schema;\r\nusing System.Text.Json.Serialization;\r\n\r\n\r\nnamespace Entities;\r\n\r\npublic class Home\r\n{\r\n    //[Key]\r\n    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]\r\n    public long HomeId { get; set; } // Primary key\r\n    public string Address { get; set; }\r\n    [JsonIgnore]\r\n    public long UserId { get; set; }\r\n    \r\n    [JsonIgnore] public RoomProfile? CurrentRoomProfile { get; set; }\r\n    \r\n    [JsonIgnore]\r\n    public List<RoomProfile> RoomProfiles { get; set; } = new List<RoomProfile>();\r\n    [JsonIgnore] \r\n    public List<SensorData>? Measurements { get; set; } = new List<SensorData>();\r\n  \r\n    public string? DeviceEui { get; set; }  // need to change this method name\r\n    \r\n    [JsonConstructor]\r\n    public Home(string address)\r\n    {\r\n        Address = address;\r\n    }\r\n}  \r\n
+===================================================================
+diff --git a/Entities/Home.cs b/Entities/Home.cs
+--- a/Entities/Home.cs	
++++ b/Entities/Home.cs	
+@@ -15,7 +15,7 @@
+     [JsonIgnore]
+     public long UserId { get; set; }
+     
+-    [JsonIgnore] public RoomProfile? CurrentRoomProfile { get; set; }
++    [JsonIgnore] public RoomProfile CurrentRoomProfile { get; set; }
+     
+     [JsonIgnore]
+     public List<RoomProfile> RoomProfiles { get; set; } = new List<RoomProfile>();
+Index: SmartHomeController/obj/rider.project.restore.info
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>17009935535252602
+===================================================================
+diff --git a/SmartHomeController/obj/rider.project.restore.info b/SmartHomeController/obj/rider.project.restore.info
+--- a/SmartHomeController/obj/rider.project.restore.info	
++++ b/SmartHomeController/obj/rider.project.restore.info	
+@@ -1,1 +1,1 @@
+-17009935535252602
+\ No newline at end of file
++17017943085366369
+\ No newline at end of file
+Index: MyNotificationService/obj/rider.project.restore.info
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>17009935535252602
+===================================================================
+diff --git a/MyNotificationService/obj/rider.project.restore.info b/MyNotificationService/obj/rider.project.restore.info
+--- a/MyNotificationService/obj/rider.project.restore.info	
++++ b/MyNotificationService/obj/rider.project.restore.info	
+@@ -1,1 +1,1 @@
+-17009935535252602
+\ No newline at end of file
++17017943083354575
+\ No newline at end of file
+Index: Contracts/obj/Debug/net7.0/Contracts.AssemblyInfo.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>//------------------------------------------------------------------------------\r\n// <auto-generated>\r\n//     This code was generated by a tool.\r\n//     Runtime Version:4.0.30319.42000\r\n//\r\n//     Changes to this file may cause incorrect behavior and will be lost if\r\n//     the code is regenerated.\r\n// </auto-generated>\r\n//------------------------------------------------------------------------------\r\n\r\nusing System;\r\nusing System.Reflection;\r\n\r\n[assembly: System.Reflection.AssemblyCompanyAttribute(\"Contracts\")]\r\n[assembly: System.Reflection.AssemblyConfigurationAttribute(\"Debug\")]\r\n[assembly: System.Reflection.AssemblyFileVersionAttribute(\"1.0.0.0\")]\r\n[assembly: System.Reflection.AssemblyInformationalVersionAttribute(\"1.0.0\")]\r\n[assembly: System.Reflection.AssemblyProductAttribute(\"Contracts\")]\r\n[assembly: System.Reflection.AssemblyTitleAttribute(\"Contracts\")]\r\n[assembly: System.Reflection.AssemblyVersionAttribute(\"1.0.0.0\")]\r\n\r\n// Generated by the MSBuild WriteCodeFragment class.\r\n\r\n
+===================================================================
+diff --git a/Contracts/obj/Debug/net7.0/Contracts.AssemblyInfo.cs b/Contracts/obj/Debug/net7.0/Contracts.AssemblyInfo.cs
+--- a/Contracts/obj/Debug/net7.0/Contracts.AssemblyInfo.cs	
++++ b/Contracts/obj/Debug/net7.0/Contracts.AssemblyInfo.cs	
+@@ -1,7 +1,6 @@
+ //------------------------------------------------------------------------------
+ // <auto-generated>
+ //     This code was generated by a tool.
+-//     Runtime Version:4.0.30319.42000
+ //
+ //     Changes to this file may cause incorrect behavior and will be lost if
+ //     the code is regenerated.
+Index: EfcDataAccess/obj/rider.project.restore.info
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>17009935535252602
+===================================================================
+diff --git a/EfcDataAccess/obj/rider.project.restore.info b/EfcDataAccess/obj/rider.project.restore.info
+--- a/EfcDataAccess/obj/rider.project.restore.info	
++++ b/EfcDataAccess/obj/rider.project.restore.info	
+@@ -1,1 +1,1 @@
+-17009935535252602
+\ No newline at end of file
++17017943085406465
+\ No newline at end of file
+Index: Contracts/obj/rider.project.restore.info
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>17009935535252602
+===================================================================
+diff --git a/Contracts/obj/rider.project.restore.info b/Contracts/obj/rider.project.restore.info
+--- a/Contracts/obj/rider.project.restore.info	
++++ b/Contracts/obj/rider.project.restore.info	
+@@ -1,1 +1,1 @@
+-17009935535252602
+\ No newline at end of file
++17017943079622955
+\ No newline at end of file
+Index: Entities/obj/rider.project.restore.info
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>17009935535252602
+===================================================================
+diff --git a/Entities/obj/rider.project.restore.info b/Entities/obj/rider.project.restore.info
+--- a/Entities/obj/rider.project.restore.info	
++++ b/Entities/obj/rider.project.restore.info	
+@@ -1,1 +1,1 @@
+-17009935535252602
+\ No newline at end of file
++17017943079602970
+\ No newline at end of file

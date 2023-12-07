@@ -1,0 +1,59 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1" date="1701798308428" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 5/12/2023 6:44 p. m. [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="SmartHomeController/bin/Debug/net7.0/Entities.dll" />
+    <option name="AFTER_PATH" value="SmartHomeController/bin/Debug/net7.0/Entities.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/Entities.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="SmartHomeController/bin/Debug/net7.0/EfcDataAccess.dll" />
+    <option name="AFTER_PATH" value="SmartHomeController/bin/Debug/net7.0/EfcDataAccess.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/EfcDataAccess.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="SmartHomeController/obj/Debug/net7.0/SmartHomeController.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="SmartHomeController/obj/Debug/net7.0/SmartHomeController.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/SmartHomeController.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="EfcDataAccess/bin/Debug/net7.0/Entities.pdb" />
+    <option name="AFTER_PATH" value="EfcDataAccess/bin/Debug/net7.0/Entities.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/Entities.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="SmartHomeController/bin/Debug/net7.0/Contracts.dll" />
+    <option name="AFTER_PATH" value="SmartHomeController/bin/Debug/net7.0/Contracts.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/Contracts.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="EfcDataAccess/obj/Debug/net7.0/EfcDataAccess.pdb" />
+    <option name="AFTER_PATH" value="EfcDataAccess/obj/Debug/net7.0/EfcDataAccess.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/EfcDataAccess.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Contracts/obj/Debug/net7.0/Contracts.pdb" />
+    <option name="AFTER_PATH" value="Contracts/obj/Debug/net7.0/Contracts.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/Contracts.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="SmartHomeController/obj/Debug/net7.0/SmartHomeController.dll" />
+    <option name="AFTER_PATH" value="SmartHomeController/obj/Debug/net7.0/SmartHomeController.dll" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/SmartHomeController.dll" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="SmartHomeController/obj/Debug/net7.0/SmartHomeController.pdb" />
+    <option name="AFTER_PATH" value="SmartHomeController/obj/Debug/net7.0/SmartHomeController.pdb" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/SmartHomeController.pdb" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="EfcDataAccess/obj/Debug/net7.0/EfcDataAccess.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="EfcDataAccess/obj/Debug/net7.0/EfcDataAccess.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/EfcDataAccess.csproj.AssemblyReference.cache" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Contracts/obj/Debug/net7.0/Contracts.csproj.AssemblyReference.cache" />
+    <option name="AFTER_PATH" value="Contracts/obj/Debug/net7.0/Contracts.csproj.AssemblyReference.cache" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.Cloud/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_12_2023_6_44_p_ m__[Changes]1/Contracts.csproj.AssemblyReference.cache" />
+  </binary>
+</changelist>
