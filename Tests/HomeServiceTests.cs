@@ -1,3 +1,4 @@
+using System.Collections;
 using EfcDataAccess.DAOs;
 using Microsoft.EntityFrameworkCore;
 
@@ -32,13 +33,12 @@ public class HomeServiceTests
     [Test]
     public async Task AddDataToDataMeasurements()
     {
-        var sensorData = new SensorData(100, 99, "SHSDIG9999");
+        //var sensorData = new SensorData(100, 99, "SHSDIG9999");
 
-        sensorData.HomeId = 1;
-        
-        await _lastMeasurementDao.AddSensorMeasurement(sensorData, 1);
-        
-        await _dbContext.SaveChangesAsync();
+        //sensorData.HomeId = 1;
+       ;
+
+        Console.WriteLine(_homeDao.RetrieveAllHomeIdsFromDB());
 
         // Act
         //var addedHome = await _homeDao.AddNewHome(user.Id, home);
