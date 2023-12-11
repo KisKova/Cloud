@@ -121,6 +121,8 @@ public class HomeDao : IHomeService {
         return home;
     }
     
+    
+    //Method to get all homes from all users.*
     public async Task<ICollection<Home>> RetrieveAllHomesFromSystem() {
         ICollection<Home> homes = new List<Home>();
         try
