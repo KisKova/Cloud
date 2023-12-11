@@ -54,12 +54,9 @@ public class TcpBackgroundListener
     {
         try
         {
-            //using var scope = _serviceProvider.CreateScope();
-            
-            Console.WriteLine("Now we set the service!");
+            Console.WriteLine("Now we're setting the necessary services!");
 
             var sensorDataService = _serviceProvider.GetRequiredService<ISensorDataService>();
-            var roomService = _serviceProvider.GetRequiredService<IRoomService>();
             var homeService = _serviceProvider.GetRequiredService<IHomeService>();
             var limitService = _serviceProvider.GetRequiredService<IMaxLimitService>();
             var notificationService = _serviceProvider.GetRequiredService<INotificationSender>();
@@ -69,9 +66,7 @@ public class TcpBackgroundListener
             byte[] buffer = new byte[256];
             StringBuilder data = new StringBuilder();
             
-            Console.WriteLine("Receiving data...");
-
-            bool notification = false;
+            Console.WriteLine("Start listening...");
 
             while (true)
             {
@@ -84,7 +79,8 @@ public class TcpBackgroundListener
                 {
                     string receivedData = data.ToString();
                     
-                    //var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData); IMPORTANT
+                    var upLinkDto = JsonConvert.DeserializeObject<UplinkDTO>(receivedData);
+                    
                     Console.WriteLine("Received data: " + receivedData);
                     
                     ArrayList homeIdsList = await homeService.RetrieveAllHomeIdsFromDB();
@@ -96,80 +92,75 @@ public class TcpBackgroundListener
                         
                         SensorData sensorData = new SensorData();
                         
-                        sensorData.HumidityData = 46;
-                        sensorData.TemperatureData = 26;
+                        sensorData.HumidityData = upLinkDto.humidity_percentage;
+                        sensorData.TemperatureData = ConstructTemperature(upLinkDto.temperature_integer, upLinkDto.temperature_decimal);
                         sensorData.HomeId = id;
-                        sensorData.Timestamp = DateTime.Now;
-                        sensorData.DeviceEui = "SSHDI7";
+                        //sensorData.Timestamp = DateTime.Now;
+                        sensorData.DeviceEui = upLinkDto.device_UID;
                         
                         Console.WriteLine("Adding the data to the database...");
                         await sensorDataService.AddSensorMeasurement(sensorData,id);
                         
                         Console.WriteLine("Check the threshold limits...");
                         var limits = await limitService.RetrieveThresholdForCurrentRoom(id);
-                        if (sensorData.TemperatureData < limits.TemperatureMin || 
-                            sensorData.HumidityData < limits.HumidityMin)
+                        if (limits != null)
                         {
-                            var message = "The temperature/humidity is too high. Window is opening...";
-                            Console.WriteLine(message);
-                            
-                            await SendDataToIoT(60, stream);
-
-                            long userId = await homeService.RetrieveUserIdByHomeId(id);
-                            
-                            Console.WriteLine("UserId: " + userId);
-
-                            var token = await userService.GetUserTokenById(userId);
-                            
-                            Console.WriteLine("UserToken: " + token);
-
-                            if (token != null)
+                            if (sensorData.TemperatureData < limits.TemperatureMin ||
+                                sensorData.HumidityData < limits.HumidityMin)
                             {
-                                await notificationService.SendUserNotificationAsync(token, "High temperature/humidity! Limit has been reached!",
-                                                                message);
+                                var message = "The temperature/humidity is too high. Window is opening...";
+                                Console.WriteLine(message);
+
+                                await SendDataToIoT("ID",0, stream);
+
+                                long userId = await homeService.RetrieveUserIdByHomeId(id);
+
+                                Console.WriteLine("UserId: " + userId);
+
+                                var token = await userService.GetUserTokenById(userId);
+
+                                Console.WriteLine("UserToken: " + token);
+
+                                if (token != null)
+                                {
+                                    await notificationService.SendUserNotificationAsync(token, 
+                                        "High temperature/humidity! Limit has been reached!",
+                                        message);
+                                }
                             }
-                        } else if (sensorData.TemperatureData > limits.TemperatureMax ||
-                                   sensorData.HumidityData > limits.HumidityMax)
-                        {
-                            var message = "The temperature/humidity is too low. Window is closing...";
-                            Console.WriteLine(message);
-                            
-                            await SendDataToIoT(0, stream);
-                            
-                            long userId = await homeService.RetrieveUserIdByHomeId(id);
-                            
-                            Console.WriteLine("UserId: " + userId);
-
-                            var token = await userService.GetUserTokenById(userId);
-                            
-                            Console.WriteLine("UserToken: " + token);
-
-                            if (token != null)
+                            else if (sensorData.TemperatureData > limits.TemperatureMax ||
+                                     sensorData.HumidityData > limits.HumidityMax)
                             {
-                                await notificationService.SendUserNotificationAsync(token, "Low temperature/humidity! Limit has been reached!",
-                                    message);
+                                var message = "The temperature/humidity is too low. Window is closing...";
+                                Console.WriteLine(message);
+
+                                await SendDataToIoT("ID",90, stream);
+
+                                long userId = await homeService.RetrieveUserIdByHomeId(id);
+
+                                Console.WriteLine("UserId: " + userId);
+
+                                var token = await userService.GetUserTokenById(userId);
+
+                                Console.WriteLine("UserToken: " + token);
+
+                                if (token != null)
+                                {
+                                    await notificationService.SendUserNotificationAsync(token, 
+                                        "Low temperature/humidity! Limit has been reached!",
+                                        message);
+                                }
+                            }
+                            else
+                            {
+                                Console.WriteLine("Temperature and humidity are inside the ideal range!");
                             }
                         }
+                        else
+                        {
+                            Console.WriteLine("There are no limits.");
+                        }
                     }
-                    
-                    
-
-                    DownlinkDTO downLinkDto = new ()
-                    {
-                        temperature_limit_high = 40,
-                        temperature_limit_low = 0,
-                        humidity_limit_high = 70,
-                        humidity_limit_low = 30,
-                        servo_limit_high = 180,
-                        servo_normal = 72,
-                        servo_limit_low = 0,
-                    };
-                    
-                    //serialize to json
-                    var downLinkJson = JsonConvert.SerializeObject(downLinkDto);
-                    //send serialized DownLink
-                    await stream.WriteAsync(Encoding.UTF8.GetBytes(downLinkJson), 0, Encoding.UTF8.GetBytes(downLinkJson).Length);
-                    Console.WriteLine("Data sent to client.");
                             
                     data.Clear();
                 }
@@ -184,17 +175,12 @@ public class TcpBackgroundListener
         }
     }
 
-    private async Task SendDataToIoT(int servoAngel, NetworkStream str)
+    private async Task SendDataToIoT(string deviceId, int servoAngel, NetworkStream str)
     {
         DownlinkDTO downLinkDto = new ()
         {
-            temperature_limit_high = 40,
-            temperature_limit_low = 0,
-            humidity_limit_high = 70,
-            humidity_limit_low = 30,
-            servo_limit_high = 180,
-            servo_normal = servoAngel,
-            servo_limit_low = 0,
+            device_UID = deviceId,
+            servo_normal = servoAngel
         };
                     
         //serialize to json
@@ -202,5 +188,12 @@ public class TcpBackgroundListener
         //send serialized DownLink
         await str.WriteAsync(Encoding.UTF8.GetBytes(downLinkJson), 0, Encoding.UTF8.GetBytes(downLinkJson).Length);
         Console.WriteLine("Data sent to client.");
+    }
+
+    private float ConstructTemperature(int whole, int dec)
+    {
+        float rest = dec;
+        float temp = whole + rest / 10;
+        return temp;
     }
 }

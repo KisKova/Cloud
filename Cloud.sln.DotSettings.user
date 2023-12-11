@@ -1,4 +1,7 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
+  &lt;Assembly Path="/Users/marcellkovacs/.nuget/packages/firebaseadmin/2.4.0/lib/netstandard2.0/FirebaseAdmin.dll" /&gt;
+&lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2b035c95_002D41b5_002D41bd_002Dad33_002D50aac445418a/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Tests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;NUnit3x::1B50BD6A-706C-482C-B374-7D90C91418D0::net8.0::TestProject1.Tests&lt;/TestId&gt;
