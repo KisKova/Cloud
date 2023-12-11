@@ -5,11 +5,10 @@ on:
     branches: [ development ]
   pull_request:
     branches: [ development ] # Development branch
-    
-runs-on: ubuntu-latest
 
 jobs:
   job1:
+    runs-on: ubuntu-latest
     name: Build and test
     steps:
       - name: Checkout
