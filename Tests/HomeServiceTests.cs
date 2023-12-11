@@ -40,6 +40,8 @@ public class HomeServiceTests
 
         Console.WriteLine(_homeDao.RetrieveAllHomeIdsFromDB());
 
+        Assert.Equals(true, false);
+
         // Act
         //var addedHome = await _homeDao.AddNewHome(user.Id, home);
 
