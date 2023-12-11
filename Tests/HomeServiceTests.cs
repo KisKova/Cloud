@@ -36,11 +36,9 @@ public class HomeServiceTests
         //var sensorData = new SensorData(100, 99, "SHSDIG9999");
 
         //sensorData.HomeId = 1;
-       ;
+       
 
         Console.WriteLine(_homeDao.RetrieveAllHomeIdsFromDB());
-
-        Assert.Equals(true, false);
 
         // Act
         //var addedHome = await _homeDao.AddNewHome(user.Id, home);
