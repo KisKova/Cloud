@@ -1,0 +1,20 @@
+name: Build image in docker
+
+on:
+  push:
+    branches: [ development ]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    name: Build Image
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build image for TCP Server
+        uses: docker build -t tcp-server-image:1.0 TcpListenerBackgroundService/.
+      - name: Verify images
+        uses: | 
+          echo -n "Verifying images: "
+          docker images
+# AZURE DEPLOY

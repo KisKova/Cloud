@@ -5,6 +5,8 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+        <ContainerRegistry>tcpcontainer.azurecr.io</ContainerRegistry>
     </PropertyGroup>
 
     <ItemGroup>

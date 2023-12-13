@@ -1,6 +1,7 @@
 ﻿using Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 
 namespace EfcDataAccess; 
 
@@ -21,6 +22,11 @@ public class SmartHomeSystemContext : DbContext {
     public SmartHomeSystemContext(IConfiguration configuration)
     {
         Configuration = configuration;
+    }
+    
+    public SmartHomeSystemContext(DbContextOptions options):base(options)
+    {
+        
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
