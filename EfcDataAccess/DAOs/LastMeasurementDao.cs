@@ -93,7 +93,7 @@ public class LastMeasurementDao : ISensorDataService {
             try
             {
                 profile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p =>
-                        p.RoomProfileId == home.CurrentRoomProfile!.RoomProfileId);
+                        p.Id == home.CurrentRoomProfile!.Id);
             }
             catch (Exception e)
             {
@@ -142,6 +142,7 @@ public class LastMeasurementDao : ISensorDataService {
         }
         catch (Exception e)
         {
+            Console.WriteLine(e);
             throw new Exception("Something went wrong when updating the database.");
             
         }

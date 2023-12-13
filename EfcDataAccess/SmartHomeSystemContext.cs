@@ -6,18 +6,18 @@ namespace EfcDataAccess;
 
 public class SmartHomeSystemContext : DbContext {
     
-    public DbSet<SensorData> DataMeasures { get; set; }
-    public DbSet<Home> Homes { get; set; }
-    public DbSet<RoomProfile> RoomProfiles { get; set; }
-    public DbSet<User> Users { get; set; }
-    public DbSet<ThresholdLimits> ThresholdsLimits { get; set; }
+    public DbSet<SensorData> DataMeasures { get; set; } = null!;
+    public DbSet<Home> Homes { get; set; } = null!;
+    public DbSet<RoomProfile> RoomProfiles { get; set; } = null!;
+    public DbSet<User> Users { get; set; } = null!;
+    public DbSet<ThresholdLimits> ThresholdsLimits { get; set; } = null!;
     
     protected readonly IConfiguration Configuration;
 
     public SmartHomeSystemContext() {
         
     }
-    
+
     public SmartHomeSystemContext(IConfiguration configuration)
     {
         Configuration = configuration;
@@ -25,8 +25,7 @@ public class SmartHomeSystemContext : DbContext {
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
     {
-        optionsBuilder.UseNpgsql("Host=cornelius.db.elephantsql.com;Database=tckwnbjh;Port=5432;Username=tckwnbjh;Password=AVp0qq2Ls5Go3sZD4Xv3Jp97TAqu_gGv;",
-            options => options.UseAdminDatabase("tckwnbjh"));
+        optionsBuilder.UseNpgsql("Host=34.79.231.88;Database=postgres;Port=5432;Username=postgres;Password=YUPn5+J)$}yMzB{-;");
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,7 +33,7 @@ public class SmartHomeSystemContext : DbContext {
         modelBuilder.Entity<LastMeasurement>().HasKey(m => m.LastMeasurementId);
         
         modelBuilder.Entity<Home>().HasKey(g => g.HomeId);
-        modelBuilder.Entity<RoomProfile>().HasKey(p => p.RoomProfileId);
+        modelBuilder.Entity<RoomProfile>().HasKey(p => p.Id);
         modelBuilder.Entity<Home>().HasIndex(g => g.DeviceEui).IsUnique();
 
         modelBuilder.Entity<User>().HasKey(u => u.Id);

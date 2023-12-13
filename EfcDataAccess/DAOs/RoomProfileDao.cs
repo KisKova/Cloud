@@ -16,7 +16,7 @@ public class RoomProfileDao : IRoomService {
     public async Task<RoomProfile> CreateRoomProfile(RoomProfile roomProfile, long userId) {
         try
         {
-            await _smartHomeSystemContext.ThresholdsLimits!.AddAsync(roomProfile.Limits);
+            await _smartHomeSystemContext.ThresholdsLimits!.AddAsync(roomProfile.Threshold);
             await _smartHomeSystemContext.RoomProfiles!.AddAsync(roomProfile);
         }
         catch (Exception e)
@@ -59,7 +59,7 @@ public class RoomProfileDao : IRoomService {
         RoomProfile roomProfile;
         try
         {
-            roomProfile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p => p.RoomProfileId == roomProfileId);
+            roomProfile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p => p.Id == roomProfileId);
         }
         catch (Exception e)
         {
@@ -112,7 +112,7 @@ public class RoomProfileDao : IRoomService {
         try
         {
             defaultRoomProfiles = await _smartHomeSystemContext.RoomProfiles!
-                    .Include(p => p.Limits)
+                    .Include(p => p.Threshold)
                     .Where(p => p.IsDefault == true)
                     .ToListAsync();
         }
@@ -129,7 +129,7 @@ public class RoomProfileDao : IRoomService {
         RoomProfile roomProfile;
         try
         {
-            roomProfile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p => p.RoomProfileId == roomProfileId);
+            roomProfile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p => p.Id == roomProfileId);
         }
         catch (Exception e)
         {
@@ -144,7 +144,7 @@ public class RoomProfileDao : IRoomService {
         RoomProfile roomProfile;
         try
         {
-            roomProfile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p => p.RoomProfileId == roomProfileId);
+            roomProfile = await _smartHomeSystemContext.RoomProfiles!.FirstAsync(p => p.Id == roomProfileId);
         }
         catch (Exception e)
         {

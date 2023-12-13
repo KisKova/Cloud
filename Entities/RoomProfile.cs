@@ -2,39 +2,43 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
+
 namespace Entities;
 
 public class RoomProfile
 {
 
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    public long RoomProfileId { get; set; }
-    
-    public string RoomName { get; set; }
-    
+    public long Id { get; set; }  // RoomProfileId => creating table "
+    public string RoomName { get; set; } 
     public float IdealTemperature { get; set; }
-
-    public bool IsDefault { get; set; } = false;
     public float IdealHumidity { get; set; }
+    public bool IsDefault { get; set; } = false;
+   
+    [JsonIgnore]
+    public ThresholdLimits Threshold { get; set; }
 
     // Add other attributes specific to room profiles
 
-    [JsonIgnore] public List<SensorData>? Measurements { get; set; } = new List<SensorData>();
-
-    public ThresholdLimits Limits { get; set; }
+    [System.Text.Json.Serialization.JsonIgnore] 
+    public ICollection<SensorData>? Measurements { get; set; } = new List<SensorData>();
+    
+    
 
     public RoomProfile()
     {
     }
-    [JsonConstructor]
-    public RoomProfile(long roomProfileId, string roomName, float idealTemperature, float idealHumidity, ThresholdLimits limits)
+    
+    
+    [System.Text.Json.Serialization.JsonConstructor]
+    public RoomProfile(long id, string roomName, float idealTemperature, float idealHumidity, [JsonProperty(PropertyName = "threshold")] ThresholdLimits threshold)
     {
-        RoomProfileId = roomProfileId;
+        Id = id;
         RoomName = roomName;
         IdealTemperature = idealTemperature;
         IdealHumidity = idealHumidity;
-        Limits = limits;
+        Threshold = new ThresholdLimits();
     }
 }
     

@@ -8,7 +8,7 @@ using SmartHomeController.Key;
 namespace SmartHomeController.Controllers
 {
     [ApiController]
-    [ApiKey]
+    //[ApiKey]
     [Route("/Alerts/")]
     public class AlertController : ControllerBase
     {

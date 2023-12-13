@@ -6,10 +6,10 @@ namespace Entities
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long Id { get; set; }
-        public float HumidityMin { get; set; } = -999f;
-        public float HumidityMax { get; set; } = 999f;
-        public float TemperatureMin { get; set; } = -99f;
-        public float TemperatureMax { get; set; } = 199f;
+        public float HumidityMin { get; set; } = -999F;
+        public float HumidityMax { get; set; } = 999F;
+        public float TemperatureMin { get; set; } = -99F;
+        public float TemperatureMax { get; set; } = 199F;
 
         public override bool Equals(object? obj)
         {

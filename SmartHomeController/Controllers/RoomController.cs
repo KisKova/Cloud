@@ -11,7 +11,7 @@ namespace SmartHomeControllers.Controllers
 {
     [ApiController]
     [Route("/roomProfiles/")]
-     [ApiKey]
+    //[ApiKey]
     public class RoomController : ControllerBase
     {
         private readonly IRoomService _roomService;

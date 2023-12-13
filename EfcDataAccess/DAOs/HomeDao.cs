@@ -131,8 +131,8 @@ public class HomeDao : IHomeService {
         }
         catch (Exception e)
         {
-            Console.WriteLine("An error occurred trying to retrieve all homes.");
-            throw;
+            Console.WriteLine(e);
+            throw new Exception("An error occurred trying to retrieve all homes.");
         }
 
         return homes;

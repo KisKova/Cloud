@@ -6,6 +6,7 @@ using System.Text.Json.Serialization;
 
 namespace Entities;
 
+
 public class Home
 {
     //[Key]
@@ -15,15 +16,19 @@ public class Home
     [JsonIgnore]
     public long UserId { get; set; }
     
-    [JsonIgnore] public RoomProfile? CurrentRoomProfile { get; set; }
-    
-    [JsonIgnore]
-    public List<RoomProfile> RoomProfiles { get; set; } = new List<RoomProfile>();
+    public string? DeviceEui { get; set; }  // need to change this method name
+
     [JsonIgnore] 
     public List<SensorData>? Measurements { get; set; } = new List<SensorData>();
-  
-    public string? DeviceEui { get; set; }  // need to change this method name
+
+    [JsonIgnore]
     
+    public RoomProfile? CurrentRoomProfile { get; set; } // CurrentRoomProfile => + RoomProfileId = CurrentRoomProfileRoomProfileId
+    
+    /*[JsonIgnore]
+    public List<RoomProfile> RoomProfiles { get; set; } = new List<RoomProfile>();*/
+    
+   
     [JsonConstructor]
     public Home(string address)
     {
