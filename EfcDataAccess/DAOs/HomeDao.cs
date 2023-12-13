@@ -1,4 +1,5 @@
-﻿using Contracts;
+﻿using System.Collections;
+using Contracts;
 using Entities;
 using Microsoft.EntityFrameworkCore;
 
@@ -93,6 +94,22 @@ public class HomeDao : IHomeService {
         return user.Homes!;
     }
 
+    public async Task<long> RetrieveUserIdByHomeId(long homeId)
+    {
+        Home home;
+        try
+        {
+            home = await _smartHomeSystemContext.Homes!.FirstAsync(h => h.HomeId == homeId);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw new Exception("Home not found.");
+        }
+
+        return home.UserId;
+    }
+
     public async Task<Home> GetLastMeasurementAtHome() {
 
         SensorData sensorData;
@@ -120,8 +137,29 @@ public class HomeDao : IHomeService {
 
         return home;
     }
-    
-    
+
+    public async Task<ArrayList> RetrieveAllHomeIdsFromDB() {
+        ArrayList homeIds = new ArrayList();
+        try
+        {
+            ICollection<Home> homes = await _smartHomeSystemContext.Homes!.ToListAsync();
+
+            // Extracting homeIds from the retrieved homes
+            foreach (var home in homes)
+            {
+                homeIds.Add(home.HomeId);
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine("An error occurred trying to retrieve all home IDs.");
+            throw;
+        }
+
+        return homeIds;
+    }
+
+
     //Method to get all homes from all users.*
     public async Task<ICollection<Home>> RetrieveAllHomesFromSystem() {
         ICollection<Home> homes = new List<Home>();
