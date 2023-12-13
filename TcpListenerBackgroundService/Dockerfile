@@ -3,16 +3,16 @@ WORKDIR /app
 #EXPOSE 80
 #EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS buildc
 WORKDIR /src
 COPY ["./TcpListenerBackgroundService.csproj", "TcpListenerBackgroundService/"]
-COPY ["./Program.cs", "TcpListenerBackgroundService/"]
-COPY ["./TcpBackgroundListener.cs", "TcpListenerBackgroundService/"]
-COPY ["./deployment.yaml", "TcpListenerBackgroundService/"]
-COPY ["./service.yaml", "TcpListenerBackgroundService/"]
+#COPY ["./Program.cs", "TcpListenerBackgroundService/"]
+#COPY ["./TcpBackgroundListener.cs", "TcpListenerBackgroundService/"]
+#COPY ["./deployment.yaml", "TcpListenerBackgroundService/"]
+#COPY ["./service.yaml", "TcpListenerBackgroundService/"]
 
 RUN dotnet restore "TcpListenerBackgroundService/TcpListenerBackgroundService.csproj"
-COPY . .
+COPY . ./TcpListenerBackgroundService
 WORKDIR "/src/TcpListenerBackgroundService"
 RUN dotnet build "TcpListenerBackgroundService.csproj" -c Release -o /app/build
 

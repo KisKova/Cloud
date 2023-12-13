@@ -1,6 +1,7 @@
 using Contracts;
 using EfcDataAccess.DAOs;
 using Entities;
+using MyNotificationService;
 using TcpListenerBackgroundService;
 
 public class Program
@@ -27,7 +28,11 @@ public class Program
         // Add services if needed using serviceCollection.AddTransient/Scoped/Singleton
         serviceCollection.AddScoped<ISensorDataService, LastMeasurementDao>();
         serviceCollection.AddScoped<EfcDataAccess.SmartHomeSystemContext>();
+        serviceCollection.AddScoped<IHomeService, HomeDao>();
         serviceCollection.AddScoped<IRoomService, RoomProfileDao>();
+        serviceCollection.AddScoped<IMaxLimitService, ThresholdLimitsDao>();
+        serviceCollection.AddScoped<INotificationSender, NotificationSender>();
+        serviceCollection.AddScoped<IUserService, UserDao>();
         
         // Build the service provider
         return serviceCollection.BuildServiceProvider();

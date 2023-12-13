@@ -40,6 +40,22 @@ public class UserDao : IUserService {
         }
     }
     
+    public async Task<string?> GetUserTokenById(long id)
+    {
+        User user;
+        try
+        {
+            user = await _smartHomeSystemContext.Users!.FirstAsync(u => u.Id == id);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw new Exception("There is no user with that id.");
+        }
+
+        return user.Token;
+    }
+    
     //public async Task<User> GetHomeUser(long Id)
     //return Home for the set user Id.
 

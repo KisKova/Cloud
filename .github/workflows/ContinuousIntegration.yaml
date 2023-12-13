@@ -1,0 +1,21 @@
+name: CI Workflow - Build and test
+
+on:
+  push:
+    branches: [ development ]
+  pull_request:
+    branches: [ development ] # Development branch
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    name: Build and test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build
+      - name: Run NUnit tests
+        run: dotnet test

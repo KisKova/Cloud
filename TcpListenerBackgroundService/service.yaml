@@ -4,8 +4,12 @@ metadata:
   name: tcp-server-service
 spec:
   selector:
-    app: tcplistenerbackgroundservice
+    app: tcpbackgroundservice-pod
   ports:
     - protocol: TCP
       port: 5000  # Replace with your server port
-      targetPort: 5000  # Replace with your server port
+      targetPort: 80  # Replace with your server port
+  type: LoadBalancer
+  
+
+

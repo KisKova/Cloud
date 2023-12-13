@@ -7,6 +7,6 @@ namespace Contracts
     {
         Task<ThresholdLimits> FetchThresholdForSpecificRoomProfile(long roomProfileId);
         Task UpdateThresholdForRoomProfile(ThresholdLimits updatedThresholdLimits, long roomProfileId);
-        Task<ThresholdLimits> RetrieveThresholdForCurrentRoom(long homeId);
+        Task<ThresholdLimits?> RetrieveThresholdForCurrentRoom(long homeId);
     }
 }

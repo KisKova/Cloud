@@ -1,5 +1,7 @@
+using System.Collections;
 using EfcDataAccess.DAOs;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 
 namespace TestProject1;
 
@@ -15,30 +17,39 @@ public class HomeServiceTests
 {
     private SmartHomeSystemContext _dbContext;
     private HomeDao _homeDao;
+    private UserDao _userDao;
     private LastMeasurementDao _lastMeasurementDao;
 
     [SetUp]
     public void Setup()
     {
-        //var options = new DbContextOptionsBuilder<SmartHomeSystemContext>()
-           // .UseInMemoryDatabase(databaseName: "TestDatabase")
-          //  .Options;
-
-        //_dbContext = new SmartHomeSystemContext(options);
-        _homeDao = new HomeDao(_dbContext);
-        _lastMeasurementDao = new LastMeasurementDao(_dbContext);
+        var options = new DbContextOptionsBuilder<SmartHomeSystemContext>()
+           .UseInMemoryDatabase(databaseName: "TestDatabase")
+          .Options;
+        
+        //var mockContext = new Mock<SmartHomeSystemContext>(options);
+        var context = new SmartHomeSystemContext(options);
+        _homeDao = new HomeDao(context);
+        _userDao = new UserDao(context);
     }
 
     [Test]
-    public async Task AddDataToDataMeasurements()
+    public async Task AddUser()
     {
-        var sensorData = new SensorData(100, 99, "SHSDIG9999");
+        /*User user = new User(1, "Isti", "isti@gmail.com");
+        User retrieved;
 
-        sensorData.HomeId = 1;
-        
-        await _lastMeasurementDao.AddSensorMeasurement(sensorData, 1);
-        
-        await _dbContext.SaveChangesAsync();
+        await _userDao.RegisterUser(user);
+
+        retrieved = await _userDao.GetUserById(1);
+
+        Assert.Equals(user,retrieved);*/
+
+        //Home home = new Home("address");
+
+        //await _homeDao.AddNewHome(1, home);
+
+        //_homeDao.
 
         // Act
         //var addedHome = await _homeDao.AddNewHome(user.Id, home);

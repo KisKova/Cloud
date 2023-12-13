@@ -17,8 +17,8 @@ public class ThresholdLimitsDao : IMaxLimitService {
         RoomProfile profile;
         try
         {
-            profile = await _smartHomeSystemContext.RoomProfiles!.Include(p => p.Threshold)
-                    .FirstAsync(p => p.Id == roomProfileId);
+            profile = await _smartHomeSystemContext.RoomProfiles!.Include(p => p.Limits)
+                    .FirstAsync(p => p.RoomProfileId == roomProfileId);
         }
         catch (Exception e)
         {
@@ -26,15 +26,15 @@ public class ThresholdLimitsDao : IMaxLimitService {
             throw new Exception("Room profile not found.");
         }
 
-        return profile.Threshold;
+        return profile.Limits;
     }
 
     public async Task UpdateThresholdForRoomProfile(ThresholdLimits updatedThresholdLimits, long roomProfileId) {
         RoomProfile profile;
         try
         {
-            profile = await _smartHomeSystemContext.RoomProfiles!.Include(p => p.Threshold)
-                    .FirstAsync(p => p.Id == roomProfileId);
+            profile = await _smartHomeSystemContext.RoomProfiles!.Include(p => p.Limits)
+                    .FirstAsync(p => p.RoomProfileId == roomProfileId);
         }
         catch (Exception e)
         {
@@ -42,14 +42,15 @@ public class ThresholdLimitsDao : IMaxLimitService {
             throw new Exception("Room profile not found.");
         }
 
-        profile.Threshold = updatedThresholdLimits;
+        profile.Limits = updatedThresholdLimits;
         _smartHomeSystemContext.RoomProfiles!.Update(profile);
         await _smartHomeSystemContext.SaveChangesAsync();
     }
 
-    public async Task<ThresholdLimits> RetrieveThresholdForCurrentRoom(long homeId) {
+    public async Task<ThresholdLimits?> RetrieveThresholdForCurrentRoom(long homeId) {
         long pId;
         Home home;
+        Console.WriteLine("Func is started!!!!");
         try
         {
             home = await _smartHomeSystemContext.Homes!.Include(h => h.CurrentRoomProfile)
@@ -61,20 +62,29 @@ public class ThresholdLimitsDao : IMaxLimitService {
             throw new Exception("Home not found.");
         }
 
-        pId = home.CurrentRoomProfile!.Id;
+        Console.WriteLine("This will be the problem... OR NOT?!");
+        
+        if (home.CurrentRoomProfile == null)
+        {
+            Console.WriteLine("There is no roomProfileId set!");
+            return null;
+        }
+
+        pId = home.CurrentRoomProfile!.RoomProfileId;
         RoomProfile profile;
         try
         {
-            profile = await _smartHomeSystemContext.RoomProfiles!.Include(p => p.Threshold)
-                    .FirstAsync(p => p.Id == pId);
+            profile = await _smartHomeSystemContext.RoomProfiles!.Include(p => p.Limits)
+                .FirstAsync(p => p.RoomProfileId == pId);
         }
         catch (Exception e)
         {
             Console.WriteLine(e);
             throw new Exception("Room profile not found.");
         }
-
-        return profile.Threshold;
+            
+        Console.WriteLine("The threshold limits exist.");
+        return profile.Limits;
     }
 
 }
