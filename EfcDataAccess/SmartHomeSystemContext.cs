@@ -31,7 +31,9 @@ public class SmartHomeSystemContext : DbContext {
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
     {
-        optionsBuilder.UseNpgsql("Host=34.79.231.88;Database=postgres;Port=5432;Username=postgres;Password=YUPn5+J)$}yMzB{-;");
+        //gcloud = "Host=34.79.231.88;Database=postgres;Port=5432;Username=postgres;Password=YUPn5+J)$}yMzB{-;"
+        optionsBuilder.UseNpgsql("Host=cornelius.db.elephantsql.com;Database=mwtjpsoo;Port=5432;Username=mwtjpsoo;Password=2DIX1y2bokipDw9mr5rbJZbNfGoBI1XO",
+                options => options.UseAdminDatabase("mwtjpsoo"));
     }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)

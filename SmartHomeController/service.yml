@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: smarthome-service
+spec:
+  selector:
+    app: smarthome-pod
+  ports:
+  - protocol: "TCP"
+    port: 8080
+    targetPort: 80
+  type: LoadBalancer
+

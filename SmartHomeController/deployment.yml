@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smarthome-deployment
+spec:
+  selector:
+    matchLabels:
+      app: smarthome-pod
+  template:
+    metadata:
+      labels:
+        app: smarthome-pod
+    spec:
+      containers:
+      - name: smarthomecloud-container
+        image: cloudsmarthome.azurecr.io/smarthome-cloud:1.0.0
+        resources:
+          limits:
+            memory: "400Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+          

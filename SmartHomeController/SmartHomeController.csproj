@@ -5,8 +5,9 @@
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+        <PublishProfile>DefaultContainer</PublishProfile>
+        <ContainerRegistry>cloudsmarthome.azurecr.io</ContainerRegistry>
         
-        <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
 
     <ItemGroup>

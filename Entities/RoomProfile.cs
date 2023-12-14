@@ -16,7 +16,7 @@ public class RoomProfile
     public float IdealHumidity { get; set; }
     public bool IsDefault { get; set; } = false;
    
-    [JsonIgnore]
+    
     public ThresholdLimits Threshold { get; set; }
 
     // Add other attributes specific to room profiles
@@ -32,13 +32,13 @@ public class RoomProfile
     
     
     [System.Text.Json.Serialization.JsonConstructor]
-    public RoomProfile(long id, string roomName, float idealTemperature, float idealHumidity, [JsonProperty(PropertyName = "threshold")] ThresholdLimits threshold)
+    public RoomProfile(long id, string roomName, float idealTemperature, float idealHumidity, [JsonProperty("threshold")] ThresholdLimits threshold)
     {
         Id = id;
         RoomName = roomName;
         IdealTemperature = idealTemperature;
         IdealHumidity = idealHumidity;
-        Threshold = new ThresholdLimits();
+        Threshold = threshold;
     }
 }
     

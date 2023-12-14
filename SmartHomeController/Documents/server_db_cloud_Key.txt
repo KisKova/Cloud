@@ -1,0 +1,26 @@
+server: 
+	Host: cornelius.db.elephantsql.com
+	Admin username: tckwnbjh
+	password: AVp0qq2Ls5Go3sZD4Xv3Jp97TAqu_gGv
+	port: 5432
+	database: tckwnbjh
+
+	url: jdbc:postgresql://cornelius.db.elephantsql.com/tckwnbjh
+
+
+dotnet publish --os linux -c Release -p:PublishProfile=DefaultContainer
+az acr login -n cloudsmarthome -u cloudsmarthome -p 4dnU/tRnZSbiUfTvd5NR14XID3nF9V1w9hHSrU6hsF+ACRC6wyTn
+dotnet publish --os linux -c Release -p:ContainerImageName=smarthomesystem
+docker run -it --rm -p 5038:80 smarthomecontroller:1.0.0
+choco install kubernetes-cli
+kubectl version --client
+az ad sp create-for-rbac
+az ad sp create-for-rbac --skip-assignment
+az acr login --name cloudsmarthome
+az aks get-credentials --name asksmarthomecloud --resource-group asksmarthomecloud
+kubectl get nodes
+kubectl apply -f .\deployment.yml
+kubectl get deployment
+ubectl get pods
+ubectl apply -f .\service.yml
+kubectl get services
