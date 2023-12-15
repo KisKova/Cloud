@@ -16,14 +16,12 @@ public class Program
         Console.WriteLine("Press any key to stop the server...");
         Console.Read();
 
-        // Optionally, you might add cancellation logic here to stop the server gracefully.
-        // For simplicity, this example stops the server immediately when a key is pressed.
         serverTask.Wait(); // Wait for the server task to complete
     }
 
     static IServiceProvider ConfigureServices()
     {
-        // Set up your service collection and register services here
+        // Set up service collection and register services here
         var serviceCollection = new ServiceCollection();
         // Add services if needed using serviceCollection.AddTransient/Scoped/Singleton
         serviceCollection.AddScoped<ISensorDataService, LastMeasurementDao>();
